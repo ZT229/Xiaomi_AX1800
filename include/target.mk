@@ -61,7 +61,6 @@ DEFAULT_PACKAGES.router:=\
 # For easy usage
 DEFAULT_PACKAGES.tweak:=\
 	autocore \
-	block-mount \
 	default-settings-chn \
 	kmod-nf-nathelper \
 	kmod-nf-nathelper-extra \
