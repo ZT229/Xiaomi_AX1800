@@ -21,12 +21,16 @@ DEVICE_TYPE?=router
 DEFAULT_PACKAGES:=\
 	base-files \
 	ca-bundle \
+  ca-certificates \
 	dropbear \
+  zram-swap \
 	fstools \
 	libc \
 	libgcc \
 	libustream-openssl \
+  uencrypt-openssl \
 	logd \
+  btop \
 	mtd \
 	netifd \
 	uci \
@@ -54,19 +58,64 @@ DEFAULT_PACKAGES.router:=\
 	firewall4 \
 	nftables \
 	kmod-nft-offload \
+  kmod-nf-nathelper \
+	kmod-nf-nathelper-extra \
+  kmod-nf-nat6 \
+  kmod-nft-tproxy \
+  kmod-nft-socket \
+  kmod-nft-queue \
+  kmod-nft-netdev \
+  kmod-nft-dup-inet \
+  kmod-nft-bridge \
+  kmod-nft-arp \
+  kmod-crypto-blake2b \
+  kmod-crypto-cbc \
+  kmod-crypto-ccm \
+  kmod-crypto-chacha20poly1305 \
+  kmod-crypto-cmac \
+  kmod-crypto-ctr \
+  kmod-crypto-cts \
+  kmod-crypto-deflate \
+  kmod-crypto-ecdh \
+  kmod-crypto-echainiv \
+  kmod-crypto-engine \
+  kmod-crypto-essiv \
+  kmod-crypto-fcrypt \
+  kmod-crypto-gcm \
+  kmod-crypto-gf128 \
+  kmod-crypto-ghash \
+  kmod-crypto-kpp \
+  kmod-cryptodev \
+  kmod-crypto-xxhash \
+  kmod-crypto-xts \
+  kmod-crypto-xcbc \
+  kmod-crypto-seqiv \
+  kmod-crypto-rmd160 \
+  kmod-crypto-pcbc \
+  kmod-crypto-misc \
+  kmod-crypto-michael-mic \
+  kmod-mtd-rw \
+  kmod-macsec \
+  kmod-sched-cake \
+  kmod-tcp-bbr \
+  kmod-tls \
+  kmod-tun \
+  kmod-xdp-sockets-diag \
+  kmod-inet-mptcp-diag \
 	odhcp6c \
 	odhcpd-ipv6only \
 	ppp \
-	ppp-mod-pppoe
-# For easy usage
-DEFAULT_PACKAGES.tweak:=\
-	autocore \
-	default-settings-chn \
-	kmod-nf-nathelper \
-	kmod-nf-nathelper-extra \
-	luci-light \
+	ppp-mod-pppoe \
+  autocore \
+  luci-app-daed \
+  luci-app-filetransfer \
+  luci-light \
 	luci-app-cpufreq \
 	luci-app-package-manager \
+  default-settings-chn
+
+# For easy usage
+DEFAULT_PACKAGES.tweak:=\
 	luci-compat \
 	luci-lib-base \
 	luci-lib-ipkg
