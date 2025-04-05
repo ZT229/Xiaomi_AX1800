@@ -16,6 +16,9 @@ DEFAULT_PACKAGES += \
 	kmod-gpio-button-hotplug kmod-leds-gpio \
 	kmod-ath11k kmod-ath11k-ahb \
 	kmod-qca-nss-dp \
+	kmod-nss-ifb \
+	kmod-qca-nss-macsec \
+	kmod-qca-mcs kmod-qrtr-tun \
 	kmod-qca-nss-crypto kmod-qca-nss-ecm kmod-qca-nss-drv \
 	kmod-qca-nss-drv-bridge-mgr \
 	kmod-qca-nss-drv-eogremgr \
@@ -33,6 +36,6 @@ DEFAULT_PACKAGES += \
 	kmod-qca-nss-drv-tunipip6 \
 	kmod-qca-nss-drv-vlan-mgr \
 	kmod-qca-nss-drv-vxlanmgr \
-	kmod-qca-nss-drv-wifi-meshmgr \
+	kmod-qca-nss-drv-wifi-meshmgr
 
 $(eval $(call BuildTarget))
