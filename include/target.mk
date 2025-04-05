@@ -112,6 +112,7 @@ DEFAULT_PACKAGES.router:=\
   luci-app-daed \
   luci-app-filetransfer \
   luci-app-smartdns \
+  luci-app-wol \
   luci-light \
 	luci-app-cpufreq \
 	luci-app-package-manager \
