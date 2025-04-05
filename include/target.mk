@@ -38,6 +38,7 @@ DEFAULT_PACKAGES:=\
   wget-ssl \
 	uclient-fetch \
 	urandom-seed \
+  UDPspeeder \
 	urngd
 
 ##@
