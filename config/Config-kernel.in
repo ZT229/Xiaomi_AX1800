@@ -315,6 +315,7 @@ config KERNEL_KCOV_INSTRUMENT_ALL
 
 config KERNEL_TASKSTATS
 	bool "Compile the kernel with task resource/io statistics and accounting"
+	default y
 	help
 	  Enable the collection and publishing of task/io statistics and
 	  accounting.  Enable this option to enable i/o monitoring in system
@@ -335,6 +336,7 @@ endif
 
 config KERNEL_PSI
 	bool "Compile the kernel with pressure stall information tracking"
+	default y
 	help
 	  Collect metrics that indicate how overcommitted the CPU, memory,
 	  and IO capacity are in the system.
@@ -364,10 +366,12 @@ config KERNEL_FTRACE
 
 config KERNEL_FTRACE_SYSCALLS
 	bool "Trace system calls"
+	default y
 	depends on KERNEL_FTRACE
 
 config KERNEL_ENABLE_DEFAULT_TRACERS
 	bool "Trace process context switches and events"
+	default y
 	depends on KERNEL_FTRACE
 
 config KERNEL_FUNCTION_TRACER
@@ -445,7 +449,7 @@ config KERNEL_DEBUG_INFO
 
 config KERNEL_DEBUG_INFO_BTF
 	bool "Enable additional BTF type information"
-	default y if (TARGET_armsr || TARGET_bcm27xx || TARGET_ipq806x_chromium || TARGET_mediatek_filogic || TARGET_mvebu_cortexa53 || TARGET_mvebu_cortexa72 || TARGET_rockchip || TARGET_sunxi || TARGET_x86_64) && BUILDBOT
+	default y
 	depends on !HOST_OS_MACOS
 	depends on KERNEL_DEBUG_INFO && !KERNEL_DEBUG_INFO_REDUCED
 	select DWARVES
@@ -473,7 +477,7 @@ config KERNEL_MODULE_ALLOW_BTF_MISMATCH
 
 config KERNEL_DEBUG_INFO_REDUCED
 	bool "Reduce debugging information"
-	default y if !(TARGET_armsr || TARGET_bcm27xx || TARGET_ipq806x_chromium || TARGET_mediatek_filogic || TARGET_mvebu_cortexa53 || TARGET_mvebu_cortexa72 || TARGET_rockchip || TARGET_sunxi || TARGET_x86_64) || !BUILDBOT
+	default n
 	depends on KERNEL_DEBUG_INFO
 	help
 	  If you say Y here gcc is instructed to generate less debugging
@@ -570,6 +574,7 @@ config KERNEL_BPF_EVENTS
 
 config KERNEL_PROBE_EVENTS_BTF_ARGS
 	bool "Support BTF function arguments for probe events"
+	default y
 	depends on KERNEL_DEBUG_INFO_BTF && KERNEL_KPROBE_EVENTS && LINUX_6_6
 
 config KERNEL_BPF_KPROBE_OVERRIDE
@@ -973,6 +978,7 @@ if KERNEL_CGROUPS
 
 	config KERNEL_CGROUP_PERF
 		bool "Enable perf_event per-cpu per-container group (cgroup) monitoring"
+		default y
 		select KERNEL_PERF_EVENTS
 		help
 		  This option extends the per-cpu mode to restrict monitoring to
