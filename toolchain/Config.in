@@ -10,7 +10,6 @@ menuconfig TARGET_OPTIONS
 	config TARGET_OPTIMIZATION
 		string "Target Optimizations" if TARGET_OPTIONS
 		default DEFAULT_TARGET_OPTIMIZATION
-		default y
 		help
 		  Optimizations to use when building for the target host.
 
