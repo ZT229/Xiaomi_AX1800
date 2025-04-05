@@ -77,7 +77,12 @@ DEFAULT_PACKAGES.router:=\
   kmod-crypto-cmac \
   kmod-crypto-ctr \
   kmod-crypto-cts \
+  kmod-crypto-des \
+  kmod-crypto-md4 \
+  kmod-crypto-md5 \
+  kmod-crypto-qce \
   kmod-crypto-deflate \
+  kmod-crypto-sha256 \
   kmod-crypto-ecdh \
   kmod-crypto-echainiv \
   kmod-crypto-engine \
