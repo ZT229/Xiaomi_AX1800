@@ -34,6 +34,8 @@ DEFAULT_PACKAGES:=\
 	mtd \
 	netifd \
 	uci \
+  curl \
+  wget-ssl \
 	uclient-fetch \
 	urandom-seed \
 	urngd
