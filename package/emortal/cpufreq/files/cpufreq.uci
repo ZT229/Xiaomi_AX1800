@@ -35,7 +35,7 @@ case "$DISTRIB_TARGET" in
 		;;
 	"qualcommax/ipq60xx"|\
 	"qualcommax/ipq807x")
-		uci_write_config 0 schedutil "$CPU_MIN_FREQ" "$CPU_MAX_FREQ"
+		uci_write_config 0 performance 1512000 "$CPU_MAX_FREQ"
 		;;
 	"rockchip/armv8")
 		if echo "$CPU_POLICYS" | grep -q "6"; then
