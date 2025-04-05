@@ -111,6 +111,7 @@ DEFAULT_PACKAGES.router:=\
   autocore \
   luci-app-daed \
   luci-app-filetransfer \
+  luci-app-smartdns \
   luci-light \
 	luci-app-cpufreq \
 	luci-app-package-manager \
